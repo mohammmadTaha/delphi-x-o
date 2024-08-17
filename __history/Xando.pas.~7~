@@ -1,0 +1,221 @@
+
+unit Xando;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    btn1: TButton;
+    btn2: TButton;
+    btn3: TButton;
+    btn6: TButton;
+    btn5: TButton;
+    btn4: TButton;
+    btn9: TButton;
+    btn8: TButton;
+    btn7: TButton;
+    btnexit: TButton;
+    btnnew: TButton;
+    btnrest: TButton;
+    Label1: TLabel;
+    Label2: TLabel;
+    lblx: TLabel;
+    lblo: TLabel;
+    procedure  scorekepeer;
+    procedure enable_false;
+    procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
+    procedure btn6Click(Sender: TObject);
+    procedure btn7Click(Sender: TObject);
+    procedure btn8Click(Sender: TObject);
+    procedure btn9Click(Sender: TObject);
+      
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    check:Boolean;
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+{ TForm1 }                                
+
+procedure TForm1.btn1Click(Sender: TObject);
+begin
+
+if  check=false then
+begin
+    btn1.Caption:='X';
+    check := True;
+end   
+else if check=true then
+  begin
+    btn1.Caption:='O';
+    check := false;
+  end;
+  
+end;  
+
+procedure TForm1.btn2Click(Sender: TObject);
+begin
+ if  check=false then
+begin
+    btn2.Caption:='X';
+    check := True;
+end
+else if check=true then
+  begin
+    btn2.Caption:='O';
+    check := false;
+  end
+end;
+
+procedure TForm1.btn3Click(Sender: TObject);
+begin
+ if  check=false then
+begin
+    btn3.Caption:='X';
+    check := True;
+end
+else if check=true then
+  begin
+    btn3.Caption:='O';
+    check := false;
+  end
+end;
+
+procedure TForm1.btn4Click(Sender: TObject);
+begin
+ if  check=false then
+begin
+    btn4.Caption:='X';
+    check := True;
+end
+else if check=true then
+  begin
+    btn4.Caption:='O';
+    check := false;
+  end
+
+end;
+
+procedure TForm1.btn5Click(Sender: TObject);
+begin
+ if  check=false then
+begin
+    btn5.Caption:='X';
+    check := True;
+end
+else if check=true then
+  begin
+    btn5.Caption:='O';
+    check := false;
+  end
+end;
+
+procedure TForm1.btn6Click(Sender: TObject);
+begin
+ if  check=false then
+begin
+    btn6.Caption:='X';
+    check := True;
+end
+else if check=true then
+  begin
+    btn6.Caption:='O';
+    check := false;
+  end
+end;
+
+procedure TForm1.btn7Click(Sender: TObject);
+begin
+ if  check=false then
+begin
+    btn7.Caption:='X';
+    check := True;
+end
+else if check=true then
+  begin
+    btn7.Caption:='O';
+    check := false;
+  end
+end;
+
+procedure TForm1.btn8Click(Sender: TObject);
+begin
+ if  check=false then
+begin
+    btn8.Caption:='X';
+    check := True;
+end
+else if check=true then
+  begin
+    btn8.Caption:='O';
+    check := false;
+  end
+
+end;
+
+procedure TForm1.btn9Click(Sender: TObject);
+begin
+ if  check=false then
+begin
+    btn9.Caption:='X';
+    check := True;
+end
+else if check=true then
+  begin
+    btn9.Caption:='O';
+    check := false;
+  end
+end;
+
+procedure TForm1.enable_false;
+begin
+btn1.Enabled :=false;
+btn2.Enabled :=false;
+btn3.Enabled :=false;
+btn4.Enabled :=false;
+btn5.Enabled :=false;
+btn6.Enabled :=false;
+btn7.Enabled :=false;
+btn8.Enabled :=false;
+btn9.Enabled :=false;
+
+end;
+
+procedure TForm1.scorekepeer;
+var x,o:Integer;
+begin
+  x:=StrToInt(lblx.Caption);
+  o:=StrToInt(lblo.Caption);
+
+  if (btn1.Caption='X')and (btn2.Caption='X')and (btn3.Caption='X') then
+     begin
+       lblx.Caption:=inttostr(x+1);
+       ShowMessage('Player X is winner');
+       enable_false;
+     end;
+
+end;
+
+end.
